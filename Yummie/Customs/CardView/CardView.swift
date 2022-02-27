@@ -26,6 +26,6 @@ class CardView: UIView {
         layer.shadowRadius = 5
         layer.shadowOpacity = 0.1
         cornerRadius = 10
-        
+        clipsToBounds = false
     }
 }

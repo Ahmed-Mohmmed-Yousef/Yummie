@@ -26,6 +26,9 @@
 		24E785B127CB095100FB3C2C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 24E785B027CB095100FB3C2C /* Kingfisher */; };
 		24E785B327CB0A1600FB3C2C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785B227CB0A1600FB3C2C /* String+Ext.swift */; };
 		24E785B627CB0D9A00FB3C2C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785B527CB0D9A00FB3C2C /* CardView.swift */; };
+		24E785BA27CB1A7500FB3C2C /* DishProtriatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785B827CB1A7500FB3C2C /* DishProtriatCell.swift */; };
+		24E785BB27CB1A7500FB3C2C /* DishProtriatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E785B927CB1A7500FB3C2C /* DishProtriatCell.xib */; };
+		24E785BD27CB1C8400FB3C2C /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785BC27CB1C8400FB3C2C /* Dish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		24E785AD27CB08AE00FB3C2C /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
 		24E785B227CB0A1600FB3C2C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		24E785B527CB0D9A00FB3C2C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		24E785B827CB1A7500FB3C2C /* DishProtriatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishProtriatCell.swift; sourceTree = "<group>"; };
+		24E785B927CB1A7500FB3C2C /* DishProtriatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishProtriatCell.xib; sourceTree = "<group>"; };
+		24E785BC27CB1C8400FB3C2C /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 			children = (
 				24D5A00C27CA0ED90012B338 /* OnboardSlide.swift */,
 				24E785AD27CB08AE00FB3C2C /* DishCategory.swift */,
+				24E785BC27CB1C8400FB3C2C /* Dish.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 		24E785A727CB055200FB3C2C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				24E785B727CB1A4300FB3C2C /* DishPortrait */,
 				24E785A827CB057900FB3C2C /* CategoryCell */,
 			);
 			path = Cells;
@@ -175,6 +183,15 @@
 				24E785B527CB0D9A00FB3C2C /* CardView.swift */,
 			);
 			path = CardView;
+			sourceTree = "<group>";
+		};
+		24E785B727CB1A4300FB3C2C /* DishPortrait */ = {
+			isa = PBXGroup;
+			children = (
+				24E785B827CB1A7500FB3C2C /* DishProtriatCell.swift */,
+				24E785B927CB1A7500FB3C2C /* DishProtriatCell.xib */,
+			);
+			path = DishPortrait;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E785BB27CB1A7500FB3C2C /* DishProtriatCell.xib in Resources */,
 				24D59FF927C943490012B338 /* LaunchScreen.storyboard in Resources */,
 				24E785AC27CB059500FB3C2C /* CategoryCell.xib in Resources */,
 				24D59FF627C943490012B338 /* Assets.xcassets in Resources */,
@@ -261,10 +279,12 @@
 				24E785AE27CB08AE00FB3C2C /* DishCategory.swift in Sources */,
 				24D5A01527CA809E0012B338 /* HomeVC.swift in Sources */,
 				24D5A00F27CA11790012B338 /* OnboardingCell.swift in Sources */,
+				24E785BA27CB1A7500FB3C2C /* DishProtriatCell.swift in Sources */,
 				24D5A00D27CA0ED90012B338 /* OnboardSlide.swift in Sources */,
 				24D5A00627CA08410012B338 /* OnboardingVC.swift in Sources */,
 				24E785AB27CB059500FB3C2C /* CategoryCell.swift in Sources */,
 				24D5A00B27CA0B6E0012B338 /* UIView+Ext.swift in Sources */,
+				24E785BD27CB1C8400FB3C2C /* Dish.swift in Sources */,
 				24D59FED27C943470012B338 /* AppDelegate.swift in Sources */,
 				24D59FEF27C943470012B338 /* SceneDelegate.swift in Sources */,
 				24E785B627CB0D9A00FB3C2C /* CardView.swift in Sources */,
