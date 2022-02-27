@@ -33,12 +33,18 @@ class OnboardingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        pageControl.numberOfPages = slides.count
     }
     
 
     @IBAction func btnClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
-            print("Go to start")
+            let sb = UIStoryboard(name: "HomeVC", bundle: .main)
+            let vc = sb.instantiateInitialViewController()!
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            present(vc, animated: true, completion: nil)
+            
         } else {
             currentPage += 1
             let indexPaht = IndexPath(item: currentPage, section: 0)
