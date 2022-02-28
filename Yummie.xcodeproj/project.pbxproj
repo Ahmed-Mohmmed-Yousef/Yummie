@@ -34,6 +34,13 @@
 		24E785CE27CC852400FB3C2C /* DetailsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E785CD27CC852400FB3C2C /* DetailsVC.storyboard */; };
 		24E785D027CC854100FB3C2C /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785CF27CC854100FB3C2C /* DetailsVC.swift */; };
 		24E785D227CC8DB800FB3C2C /* VC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785D127CC8DB800FB3C2C /* VC+Ext.swift */; };
+		24E785D627CC9B6D00FB3C2C /* DishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785D427CC9B6D00FB3C2C /* DishListCell.swift */; };
+		24E785D727CC9B6D00FB3C2C /* DishListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E785D527CC9B6D00FB3C2C /* DishListCell.xib */; };
+		24E785DA27CCB2C100FB3C2C /* ListDishesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785D927CCB2C100FB3C2C /* ListDishesVC.swift */; };
+		24E785DC27CCB2CF00FB3C2C /* ListDishesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E785DB27CCB2CF00FB3C2C /* ListDishesVC.storyboard */; };
+		24E785DF27CCBC2200FB3C2C /* ListAllOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785DE27CCBC2200FB3C2C /* ListAllOrderVC.swift */; };
+		24E785E127CCBC2E00FB3C2C /* ListAllOrderVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E785E027CCBC2E00FB3C2C /* ListAllOrderVC.storyboard */; };
+		24E785E327CCC01200FB3C2C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E785E227CCC01200FB3C2C /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +72,13 @@
 		24E785CD27CC852400FB3C2C /* DetailsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsVC.storyboard; sourceTree = "<group>"; };
 		24E785CF27CC854100FB3C2C /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		24E785D127CC8DB800FB3C2C /* VC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Ext.swift"; sourceTree = "<group>"; };
+		24E785D427CC9B6D00FB3C2C /* DishListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListCell.swift; sourceTree = "<group>"; };
+		24E785D527CC9B6D00FB3C2C /* DishListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListCell.xib; sourceTree = "<group>"; };
+		24E785D927CCB2C100FB3C2C /* ListDishesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesVC.swift; sourceTree = "<group>"; };
+		24E785DB27CCB2CF00FB3C2C /* ListDishesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDishesVC.storyboard; sourceTree = "<group>"; };
+		24E785DE27CCBC2200FB3C2C /* ListAllOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllOrderVC.swift; sourceTree = "<group>"; };
+		24E785E027CCBC2E00FB3C2C /* ListAllOrderVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListAllOrderVC.storyboard; sourceTree = "<group>"; };
+		24E785E227CCC01200FB3C2C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,7 @@
 				24D5A00C27CA0ED90012B338 /* OnboardSlide.swift */,
 				24E785AD27CB08AE00FB3C2C /* DishCategory.swift */,
 				24E785BC27CB1C8400FB3C2C /* Dish.swift */,
+				24E785E227CCC01200FB3C2C /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +141,8 @@
 		24D5A00127CA07FB0012B338 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24E785DD27CCBC0A00FB3C2C /* ListAllOrderVC */,
+				24E785D827CCB28900FB3C2C /* ListDishesVC */,
 				24E785CC27CC850000FB3C2C /* DetialsVC */,
 				24D5A01027CA80580012B338 /* Home */,
 				24D5A00427CA081C0012B338 /* Onboarding */,
@@ -174,6 +191,7 @@
 		24E785A727CB055200FB3C2C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				24E785D327CC9B4600FB3C2C /* DishListCell */,
 				24E785C127CB549400FB3C2C /* DishLandscapeCell */,
 				24E785B727CB1A4300FB3C2C /* DishPortrait */,
 				24E785A827CB057900FB3C2C /* CategoryCell */,
@@ -223,6 +241,33 @@
 				24E785CF27CC854100FB3C2C /* DetailsVC.swift */,
 			);
 			path = DetialsVC;
+			sourceTree = "<group>";
+		};
+		24E785D327CC9B4600FB3C2C /* DishListCell */ = {
+			isa = PBXGroup;
+			children = (
+				24E785D427CC9B6D00FB3C2C /* DishListCell.swift */,
+				24E785D527CC9B6D00FB3C2C /* DishListCell.xib */,
+			);
+			path = DishListCell;
+			sourceTree = "<group>";
+		};
+		24E785D827CCB28900FB3C2C /* ListDishesVC */ = {
+			isa = PBXGroup;
+			children = (
+				24E785D927CCB2C100FB3C2C /* ListDishesVC.swift */,
+				24E785DB27CCB2CF00FB3C2C /* ListDishesVC.storyboard */,
+			);
+			path = ListDishesVC;
+			sourceTree = "<group>";
+		};
+		24E785DD27CCBC0A00FB3C2C /* ListAllOrderVC */ = {
+			isa = PBXGroup;
+			children = (
+				24E785DE27CCBC2200FB3C2C /* ListAllOrderVC.swift */,
+				24E785E027CCBC2E00FB3C2C /* ListAllOrderVC.storyboard */,
+			);
+			path = ListAllOrderVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +343,9 @@
 				24D5A00827CA089E0012B338 /* OnboardingVC.storyboard in Resources */,
 				24D5A01227CA80830012B338 /* HomeVC.storyboard in Resources */,
 				24D59FF427C943470012B338 /* Main.storyboard in Resources */,
+				24E785DC27CCB2CF00FB3C2C /* ListDishesVC.storyboard in Resources */,
+				24E785E127CCBC2E00FB3C2C /* ListAllOrderVC.storyboard in Resources */,
+				24E785D727CC9B6D00FB3C2C /* DishListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,16 +362,20 @@
 				24D5A01527CA809E0012B338 /* HomeVC.swift in Sources */,
 				24D5A00F27CA11790012B338 /* OnboardingCell.swift in Sources */,
 				24E785BA27CB1A7500FB3C2C /* DishProtriatCell.swift in Sources */,
+				24E785E327CCC01200FB3C2C /* Order.swift in Sources */,
 				24D5A00D27CA0ED90012B338 /* OnboardSlide.swift in Sources */,
 				24D5A00627CA08410012B338 /* OnboardingVC.swift in Sources */,
 				24E785C427CB54C400FB3C2C /* DishLandscapeCell.swift in Sources */,
+				24E785DF27CCBC2200FB3C2C /* ListAllOrderVC.swift in Sources */,
 				24E785AB27CB059500FB3C2C /* CategoryCell.swift in Sources */,
 				24E785D027CC854100FB3C2C /* DetailsVC.swift in Sources */,
+				24E785D627CC9B6D00FB3C2C /* DishListCell.swift in Sources */,
 				24D5A00B27CA0B6E0012B338 /* UIView+Ext.swift in Sources */,
 				24E785BD27CB1C8400FB3C2C /* Dish.swift in Sources */,
 				24D59FED27C943470012B338 /* AppDelegate.swift in Sources */,
 				24D59FEF27C943470012B338 /* SceneDelegate.swift in Sources */,
 				24E785B627CB0D9A00FB3C2C /* CardView.swift in Sources */,
+				24E785DA27CCB2C100FB3C2C /* ListDishesVC.swift in Sources */,
 				24E785B327CB0A1600FB3C2C /* String+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
