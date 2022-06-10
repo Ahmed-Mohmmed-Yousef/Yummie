@@ -34,6 +34,10 @@ class OnboardingVC: UIViewController {
         super.viewDidLoad()
 
         pageControl.numberOfPages = slides.count
+        
+        let req = NetworkService.shared.makeRequest(route: .temp, method: .post, parameter: ["name" : "ahmed", "age": 23])
+        print(req?.url)
+        print(req?.httpBody)
     }
     
 

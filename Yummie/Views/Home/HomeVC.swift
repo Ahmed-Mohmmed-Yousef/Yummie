@@ -14,19 +14,19 @@ class HomeVC: UIViewController {
     @IBOutlet weak var specialsCollectionView: UICollectionView!
     
     var categories: [DishCategory] = [
-        .init(id: "id1", name: "Africa Dish 1", image: "https://picsum.photos/100/200"),
-        .init(id: "id2", name: "Africa Dish 2", image: "https://picsum.photos/100/200"),
-        .init(id: "id3", name: "Africa Dish 3", image: "https://picsum.photos/100/200"),
-        .init(id: "id4", name: "Africa Dish 4", image: "https://picsum.photos/100/200"),
-        .init(id: "id5", name: "Africa Dish 5", image: "https://picsum.photos/100/200"),
+        .init(id: "id1", name: "Africa Dish 1", image: "https://picsum.photos/200"),
+        .init(id: "id2", name: "Africa Dish 2", image: "https://picsum.photos/200"),
+        .init(id: "id3", name: "Africa Dish 3", image: "https://picsum.photos/200"),
+        .init(id: "id4", name: "Africa Dish 4", image: "https://picsum.photos/200"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://picsum.photos/200"),
     ]
     
     var populars: [Dish] = [
-        .init(id: "id1", name: "Garri", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id2", name: "Indomie", description: "This is best I have ever tested This is best I have ever tested This is best I have ever tested This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id3", name: "Pizza", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id4", name: "Lazania", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id5", name: "NagrisCoo", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
+        .init(id: "id1", name: "Garri", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
+        .init(id: "id2", name: "Indomie", description: "This is best I have ever tested This is best I have ever tested This is best I have ever tested This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
+        .init(id: "id3", name: "Pizza", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
+        .init(id: "id4", name: "Lazania", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
+        .init(id: "id5", name: "NagrisCoo", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
     ]
     
     

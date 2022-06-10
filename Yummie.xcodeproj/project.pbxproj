@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24A716CF28538BCB004316F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A716CE28538BCB004316F3 /* NetworkService.swift */; };
+		24A716D128539E27004316F3 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A716D028539E27004316F3 /* Route.swift */; };
+		24A716D328539F29004316F3 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A716D228539F29004316F3 /* Method.swift */; };
 		24D59FED27C943470012B338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D59FEC27C943470012B338 /* AppDelegate.swift */; };
 		24D59FEF27C943470012B338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D59FEE27C943470012B338 /* SceneDelegate.swift */; };
 		24D59FF127C943470012B338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D59FF027C943470012B338 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24A716CE28538BCB004316F3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		24A716D028539E27004316F3 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		24A716D228539F29004316F3 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		24D59FE927C943470012B338 /* Yummie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D59FEC27C943470012B338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24D59FEE27C943470012B338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A716CD28538B97004316F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				24A716CE28538BCB004316F3 /* NetworkService.swift */,
+				24A716D028539E27004316F3 /* Route.swift */,
+				24A716D228539F29004316F3 /* Method.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		24D59FE027C943470012B338 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 		24D59FEB27C943470012B338 /* Yummie */ = {
 			isa = PBXGroup;
 			children = (
+				24A716CD28538B97004316F3 /* Networking */,
 				24D5A00927CA0B5D0012B338 /* Extention */,
 				24D5A00327CA08110012B338 /* Customs */,
 				24D5A00127CA07FB0012B338 /* Views */,
@@ -356,12 +373,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A716CF28538BCB004316F3 /* NetworkService.swift in Sources */,
 				24D59FF127C943470012B338 /* ViewController.swift in Sources */,
 				24E785D227CC8DB800FB3C2C /* VC+Ext.swift in Sources */,
+				24A716D128539E27004316F3 /* Route.swift in Sources */,
 				24E785AE27CB08AE00FB3C2C /* DishCategory.swift in Sources */,
 				24D5A01527CA809E0012B338 /* HomeVC.swift in Sources */,
 				24D5A00F27CA11790012B338 /* OnboardingCell.swift in Sources */,
 				24E785BA27CB1A7500FB3C2C /* DishProtriatCell.swift in Sources */,
+				24A716D328539F29004316F3 /* Method.swift in Sources */,
 				24E785E327CCC01200FB3C2C /* Order.swift in Sources */,
 				24D5A00D27CA0ED90012B338 /* OnboardSlide.swift in Sources */,
 				24D5A00627CA08410012B338 /* OnboardingVC.swift in Sources */,
