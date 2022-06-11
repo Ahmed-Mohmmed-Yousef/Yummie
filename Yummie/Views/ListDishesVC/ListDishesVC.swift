@@ -6,18 +6,13 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ListDishesVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var populars: [Dish] = [
-        .init(id: "id1", name: "Garri", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id2", name: "Indomie", description: "This is best I have ever tested This is best I have ever tested This is best I have ever tested This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id3", name: "Pizza", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id4", name: "Lazania", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-        .init(id: "id5", name: "NagrisCoo", description: "This is best I have ever tested", image: "https://picsum.photos/100/200", calories: 35.4575),
-    ]
+    var populars: [Dish] = []
     
     var category: DishCategory!
     
@@ -27,6 +22,22 @@ class ListDishesVC: UIViewController {
         // Do any additional setup after loading the view.
         title = category.name
         registerCell()
+        fetchData()
+    }
+    
+    private func fetchData() {
+        ProgressHUD.show()
+        NetworkService.shared.fetchCategoryDishes(categoryId: category.id ?? "0") { [weak self] result in
+            switch result {
+                
+            case .success(let dishes):
+                self?.populars = dishes
+                self?.tableView.reloadData()
+                ProgressHUD.showSucceed()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
     

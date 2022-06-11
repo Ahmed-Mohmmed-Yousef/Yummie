@@ -34,10 +34,7 @@ class OnboardingVC: UIViewController {
         super.viewDidLoad()
 
         pageControl.numberOfPages = slides.count
-        
-        let req = NetworkService.shared.makeRequest(route: .temp, method: .post, parameter: ["name" : "ahmed", "age": 23])
-        print(req?.url)
-        print(req?.httpBody)
+
     }
     
 
@@ -47,6 +44,7 @@ class OnboardingVC: UIViewController {
             let vc = sb.instantiateInitialViewController()!
             vc.modalPresentationStyle = .fullScreen
             vc.modalTransitionStyle = .flipHorizontal
+            UserDefaults.standard.hasOnboarded = true
             present(vc, animated: true, completion: nil)
             
         } else {

@@ -9,6 +9,15 @@
           "revision": "32e4acdf6971f58f5ad552389cf2d7d016334eaf",
           "version": "7.2.0"
         }
+      },
+      {
+        "package": "ProgressHUD",
+        "repositoryURL": "https://github.com/relatedcode/ProgressHUD.git",
+        "state": {
+          "branch": null,
+          "revision": "22c3f83268b4c47b4623fe3a9701af7310fa8d8a",
+          "version": "13.6.1"
+        }
       }
     ]
   },

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ProgressHUD
+
 
 class HomeVC: UIViewController {
 
@@ -13,27 +15,38 @@ class HomeVC: UIViewController {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
     
-    var categories: [DishCategory] = [
-        .init(id: "id1", name: "Africa Dish 1", image: "https://picsum.photos/200"),
-        .init(id: "id2", name: "Africa Dish 2", image: "https://picsum.photos/200"),
-        .init(id: "id3", name: "Africa Dish 3", image: "https://picsum.photos/200"),
-        .init(id: "id4", name: "Africa Dish 4", image: "https://picsum.photos/200"),
-        .init(id: "id5", name: "Africa Dish 5", image: "https://picsum.photos/200"),
-    ]
+    var categories: [DishCategory] = []
     
-    var populars: [Dish] = [
-        .init(id: "id1", name: "Garri", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
-        .init(id: "id2", name: "Indomie", description: "This is best I have ever tested This is best I have ever tested This is best I have ever tested This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
-        .init(id: "id3", name: "Pizza", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
-        .init(id: "id4", name: "Lazania", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
-        .init(id: "id5", name: "NagrisCoo", description: "This is best I have ever tested", image: "https://picsum.photos/200", calories: 35.4575),
-    ]
+    var populars: [Dish] = []
+    
+    var special: [Dish] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         registerCells()
+        fetchData()
+    }
+    
+    private func fetchData() {
+        ProgressHUD.show()
+        NetworkService.shared.fetchAllCategories { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+                
+            case .success(let allDishes):
+                ProgressHUD.dismiss()
+                self.categories = allDishes.categories ?? []
+                self.populars = allDishes.populars ?? []
+                self.special = allDishes.specials ?? []
+                self.categoryCollectionView.reloadData()
+                self.popularCollectionView.reloadData()
+                self.specialsCollectionView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
 
@@ -56,7 +69,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         case popularCollectionView:
             return populars.count
         case specialsCollectionView:
-            return populars.count
+            return special.count
         default:
             return 0
         }
@@ -90,7 +103,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             navigationController?.pushViewController(controller, animated: true)
         } else {
             let controller = DetailsVC.instatiate()
-            controller.dish = collectionView == popularCollectionView ? populars[indexPath.row] : populars[indexPath.row]
+            controller.dish = collectionView == popularCollectionView ? populars[indexPath.row] : special[indexPath.row]
             navigationController?.pushViewController(controller, animated: true)
         }
     }

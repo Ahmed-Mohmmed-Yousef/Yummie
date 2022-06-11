@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import ProgressHUD
 
 class DetailsVC: UIViewController {
 
@@ -34,7 +35,20 @@ class DetailsVC: UIViewController {
     }
     
     @IBAction func btnTapped(_ sender: UIButton) {
-        
+        guard let name = nameTF.text?.trimmingCharacters(in: .whitespaces), !name.isEmpty else {
+            ProgressHUD.showError("Please enter your name!")
+            return
+        }
+        ProgressHUD.show("Placing order...")
+        NetworkService.shared.placeOredr(dishId: dish.id ?? "", name: name) { result in
+            switch result {
+                
+            case .success(_):
+                ProgressHUD.showSucceed("Your order has been sent. 👨‍🍳")
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
 }
